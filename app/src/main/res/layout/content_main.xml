@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:visibility="visible"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="289dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="casual"
+        android:text="@string/guessing_game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="339dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginLeft="173dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
+        android:fontFamily="casual"
+        android:text="@string/enter_a_number_between_1_and_100"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409" />
+
+    <EditText
+        android:id="@+id/textNumber"
+        style="@android:style/Widget.EditText"
+        android:layout_width="91dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:layout_marginBottom="416dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:inputType="number"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="lollipop"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="279dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginLeft="173dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/enter_a_number_then_click_guess"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Material.Button.Small"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginBottom="416dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/guess"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumber"
+        app:layout_constraintVertical_bias="0.938"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
